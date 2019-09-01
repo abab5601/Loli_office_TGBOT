@@ -19,7 +19,12 @@ app = Flask(__name__)
 
 # 通過Telegram訪問令牌的初始bot
 bot = telegram.Bot(token=(config['TELEGRAM']['ACCESS_TOKEN']))
+app.config["DEBUG"] = True
 
+
+@app.route('/', methods=['GET'])
+def home():
+    return "<h1>Hello Flask!</h1>"
 
 @app.route('/hook', methods=['POST'])
 def webhook_handler():
