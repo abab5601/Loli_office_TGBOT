@@ -1,0 +1,28 @@
+資料庫名稱 loliofficebot
+
+
+    紀錄發車中的人資訊
+        資料表名稱 car
+        資料儲存項目
+        發車群組(id))    發車人(id)   發車有效時間   
+        char_id           USER_ID        time
+    紀錄要刪除的車
+        資料表名稱 car_id
+        資料儲存項目
+        群組ID    訊息id      刪除時間
+        char_id   message_id  time
+    系統紀錄
+        資料表名稱 LOG
+        資料儲存項目
+        發生時間    群組ID    使用者id      訊息
+        LOG_TIME   char_id   user_id  message
+    
+
+message_id 事件
+0  = 關閉
+1  = 啟動
+2  = 溺水,踢出群組
+3 = 溺水提醒
+4 = 
+98 = 當日溺水報告
+99 = 錯誤
